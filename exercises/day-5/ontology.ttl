@@ -1,30 +1,20 @@
 @prefix ex: <http://example.org/> .
-@prefix dc: <http://purl.org/dc/terms/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dc11: <http://purl.org/dc/elements/1.1/> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix cco: <http://commoncoreontologies.org/> .
-@prefix obo: <http://purl.obolibrary.org/obo/> .
-@prefix : <https://www.commoncoreontologies.org/CommonCoreOntologiesMerged#> .
 
-ex:PumpMaintenanceProcedure rdf:type https://www.commoncoreontologies.org/ont00000965 .
+
+ex:PumpMaintenanceProcedure rdf:type <https://www.commoncoreontologies.org/ont00000965> .
 
 #Technician Alex performs Inspection 17 on Pump P-17.
-ex:Alex rdf:type https://www.commoncoreontologies.org/ont00001262 .
-ex:PumpP17 rdf:type https://www.commoncoreontologies.org/ont00000116 .
-ex:Inspection17 rdf:type http://purl.obolibrary.org/obo/BFO_0000015 .
-ex:Alex http://purl.obolibrary.org/obo/BFO_0000056 ex:Inspection17 .
-ex:PumpP17 http://purl.obolibrary.org/obo/BFO_0000056 ex:Inspection17 .
+ex:Alex rdf:type <https://www.commoncoreontologies.org/ont00001262> .
+ex:PumpP17 rdf:type <https://www.commoncoreontologies.org/ont00000116> .
+ex:Inspection17 rdf:type <http://purl.obolibrary.org/obo/BFO_0000015> .
+ex:Alex <http://purl.obolibrary.org/obo/BFO_0000056> ex:Inspection17 .
+ex:PumpP17 <http://purl.obolibrary.org/obo/BFO_0000056> ex:Inspection17 .
 #The inspection produces Report R-17. .
-ex:ReportR17 https://www.commoncoreontologies.org/ont00001816 ex:Inspection17 .
+ex:ReportR17 <https://www.commoncoreontologies.org/ont00001816> ex:Inspection17 .
 #The report records a vibration measurement of 4.2 mm/s and states that the pump requires bearing replacement.
-ex:ReportMeasurent rdf:type https://www.commoncoreontologies.org/ont00001163 .
-ex:ReportMeasurement https://www.commoncoreontologies.org/ont00001863 https://www.commoncoreontologies.org/ont00001511 .
-ex:ReportMeasurement https://www.commoncoreontologies.org/ont00001769 "0.0042"^^xsd:decimal .
+ex:ReportMeasurent rdf:type <https://www.commoncoreontologies.org/ont00001163> .
+ex:ReportMeasurement <https://www.commoncoreontologies.org/ont00001863> <https://www.commoncoreontologies.org/ont00001511> .
+ex:ReportMeasurement <https://www.commoncoreontologies.org/ont00001769> "0.0042"^^xsd:decimal .
 
 
 #ex:PumpMaintenanceProcedure https://www.commoncoreontologies.org/ont00001942 .
