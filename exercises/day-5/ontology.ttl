@@ -9,6 +9,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix cco: <http://commoncoreontologies.org/> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix : <https://www.commoncoreontologies.org/CommonCoreOntologiesMerged#> .
 
 ex:PumpMaintenanceProcedure rdf:type https://www.commoncoreontologies.org/ont00000965 .
 
