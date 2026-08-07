@@ -16,5 +16,139 @@ ex:ReportMeasurent rdf:type <https://www.commoncoreontologies.org/ont00001163> .
 ex:ReportMeasurement <https://www.commoncoreontologies.org/ont00001863> <https://www.commoncoreontologies.org/ont00001511> .
 ex:ReportMeasurement <https://www.commoncoreontologies.org/ont00001769> "0.0042"^^xsd:decimal .
 
+#classes and object properties
+<https://www.commoncoreontologies.org/ont00000965> rdf:type owl:Class ;
+                                                   owl:equivalentClass [ owl:intersectionOf ( <https://www.commoncoreontologies.org/ont00000958>
+                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                owl:onProperty <https://www.commoncoreontologies.org/ont00001942> ;
+                                                                                                owl:someValuesFrom <http://purl.obolibrary.org/obo/BFO_0000001>
+                                                                                              ]
+                                                                                            ) ;
+                                                                         rdf:type owl:Class
+                                                                       ] ;
+                                                   rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> ;
+                                                   rdfs:label "Prescriptive Information Content Entity"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#altLabel> "Directive ICE"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "An Information Content Entity that consists of a set of propositions or images (as in the case of a blueprint) that prescribe some Entity."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
 
+<https://www.commoncoreontologies.org/ont00001262> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000562> ;
+                                                   rdfs:label "Person"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#altLabel> "Human"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "An Animal that is a member of the species Homo sapiens."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001754> "https://en.wikipedia.org/w/index.php?title=Human&oldid=1063145185"^^xsd:anyURI ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/AgentOntology"^^xsd:anyURI .
+
+<https://www.commoncoreontologies.org/ont00000116> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000256> ;
+                                                   rdfs:label "Pump"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A Fluid Control Artifact that is designed to impart motion to a portion of fluid to transport it within a system through the use of mechanical action."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/ArtifactOntology"^^xsd:anyURI .
+
+
+<http://purl.obolibrary.org/obo/BFO_0000015> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000003> ,
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000117> ;
+                                                               owl:allValuesFrom [ rdf:type owl:Class ;
+                                                                                   owl:unionOf ( <http://purl.obolibrary.org/obo/BFO_0000015>
+                                                                                                 <http://purl.obolibrary.org/obo/BFO_0000035>
+                                                                                               )
+                                                                                 ]
+                                                             ] ,
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000132> ;
+                                                               owl:allValuesFrom <http://purl.obolibrary.org/obo/BFO_0000015>
+                                                             ] ,
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000139> ;
+                                                               owl:allValuesFrom <http://purl.obolibrary.org/obo/BFO_0000015>
+                                                             ] ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "083-BFO" ;
+                                             rdfs:label "process"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#altLabel> "event"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "(Elucidation) p is a process means p is an occurrent that has some temporal proper part and for some time t, p has some material entity as participant"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#example> "An act of selling; the life of an organism; a process of sleeping; a process of cell-division; a beating of the heart; a process of meiosis; the taxiing of an aircraft; the programming of a computer"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000056
+<http://purl.obolibrary.org/obo/BFO_0000056> rdf:type owl:ObjectProperty ;
+                                             owl:inverseOf <http://purl.obolibrary.org/obo/BFO_0000057> ;
+                                             rdfs:domain [ rdf:type owl:Class ;
+                                                           owl:unionOf ( <http://purl.obolibrary.org/obo/BFO_0000020>
+                                                                         <http://purl.obolibrary.org/obo/BFO_0000031>
+                                                                         [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/BFO_0000004>
+                                                                                                [ rdf:type owl:Class ;
+                                                                                                  owl:complementOf <http://purl.obolibrary.org/obo/BFO_0000006>
+                                                                                                ]
+                                                                                              ) ;
+                                                                           rdf:type owl:Class
+                                                                         ]
+                                                                       )
+                                                         ] ;
+                                             rdfs:range <http://purl.obolibrary.org/obo/BFO_0000015> ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "250-BFO" ;
+                                             rdfs:label "participates in"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "(Elucidation) participates in holds between some b that is either a specifically dependent continuant or generically dependent continuant or independent continuant that is not a spatial region & some process p such that b participates in p some way"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#scopeNote> "Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: <https://github.com/BFO-ontology/BFO-2020/tree/master/src/owl/profiles/temporal%20extensions>"@en .
+
+<https://www.commoncoreontologies.org/ont00001816> rdf:type owl:ObjectProperty ;
+                                                   rdfs:subPropertyOf <http://purl.obolibrary.org/obo/BFO_0000056> ;
+                                                   owl:inverseOf <https://www.commoncoreontologies.org/ont00001986> ;
+                                                   rdfs:domain [ rdf:type owl:Class ;
+                                                                 owl:unionOf ( <http://purl.obolibrary.org/obo/BFO_0000020>
+                                                                               <http://purl.obolibrary.org/obo/BFO_0000031>
+                                                                               [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/BFO_0000004>
+                                                                                                      [ rdf:type owl:Class ;
+                                                                                                        owl:complementOf <http://purl.obolibrary.org/obo/BFO_0000006>
+                                                                                                      ]
+                                                                                                    ) ;
+                                                                                 rdf:type owl:Class
+                                                                               ]
+                                                                             )
+                                                               ] ;
+                                                   rdfs:range <http://purl.obolibrary.org/obo/BFO_0000015> ;
+                                                   rdfs:label "is output of"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "x is output of y =Def x participates in y, x is an Independent Continuant (but not a Spatial Region), y is a Process, and the presence of x at the end of y is a necessary condition for the completion of y."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/ExtendedRelationOntology"^^xsd:anyURI .
+
+
+<https://www.commoncoreontologies.org/ont00001163> rdf:type owl:Class ;
+                                                   owl:equivalentClass [ owl:intersectionOf ( <https://www.commoncoreontologies.org/ont00000853>
+                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                owl:onProperty <https://www.commoncoreontologies.org/ont00001966> ;
+                                                                                                owl:someValuesFrom <http://purl.obolibrary.org/obo/BFO_0000001>
+                                                                                              ]
+                                                                                            ) ;
+                                                                         rdf:type owl:Class
+                                                                       ] ;
+                                                   rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000853> ;
+                                                   rdfs:label "Measurement Information Content Entity"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#altLabel> "Measurement ICE"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A Descriptive Information Content Entity that describes the extent, dimensions, quantity, or quality of an Entity relative to some standard."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+
+<https://www.commoncoreontologies.org/ont00001863> rdf:type owl:ObjectProperty ;
+                                                   rdfs:subPropertyOf <http://purl.obolibrary.org/obo/BFO_0000101> ;
+                                                   owl:inverseOf <https://www.commoncoreontologies.org/ont00001961> ;
+                                                   rdfs:domain <https://www.commoncoreontologies.org/ont00000253> ;
+                                                   rdfs:range <https://www.commoncoreontologies.org/ont00000120> ;
+                                                   rdfs:label "uses measurement unit"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "x uses measurement unit y =Def y is measurement unit of x"@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+<https://www.commoncoreontologies.org/ont00001511> rdf:type owl:NamedIndividual ,
+                                                            <https://www.commoncoreontologies.org/ont00000969> ;
+                                                   rdfs:label "Meters Per Second Measurement Unit"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#altLabel> "m/s"@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/UnitsOfMeasureOntology"^^xsd:anyURI .
+
+<https://www.commoncoreontologies.org/ont00001769> rdf:type owl:DatatypeProperty ;
+                                                   rdfs:domain <https://www.commoncoreontologies.org/ont00000253> ;
+                                                   rdfs:range xsd:decimal ;
+                                                   rdfs:label "has decimal value"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A data property that has as its range a decimal value."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
 #ex:PumpMaintenanceProcedure https://www.commoncoreontologies.org/ont00001942 .
