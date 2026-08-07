@@ -2,7 +2,7 @@
 
 #A maintenance procedure specifies that a pump should be inspected every 30 days.
 ex:PumpMaintenanceProcedure rdf:type <https://www.commoncoreontologies.org/ont00001324> .
-ex:PumpMaintenanceProcedure <https://www.commoncoreontologies.org/ont00001942> rdf:type <http://purl.obolibrary.org/obo/BFO_0000015> .
+ex:PumpMaintenanceProcedure <https://www.commoncoreontologies.org/ont00001942> <http://purl.obolibrary.org/obo/BFO_0000015> .
 
 #Technician Alex performs Inspection 17 on Pump P-17.
 ex:Alex rdf:type <https://www.commoncoreontologies.org/ont00001262> .
