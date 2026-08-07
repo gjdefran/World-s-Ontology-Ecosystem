@@ -26,5 +26,4 @@ ex:ReportMeasurement https://www.commoncoreontologies.org/ont00001863 https://ww
 ex:ReportMeasurement https://www.commoncoreontologies.org/ont00001769 "0.0042"^^xsd:decimal .
 
 
-
-ex:PumpMaintenanceProcedure https://www.commoncoreontologies.org/ont00001942 .
+#ex:PumpMaintenanceProcedure https://www.commoncoreontologies.org/ont00001942 .
