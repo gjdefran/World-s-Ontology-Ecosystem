@@ -10,7 +10,7 @@
 @prefix cco: <http://commoncoreontologies.org/> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
 
-ex:PumpMaintenanceProcedure rdf:type https://www.commoncoreontologies.org/ont00000965
+ex:PumpMaintenanceProcedure rdf:type https://www.commoncoreontologies.org/ont00000965 .
 
 #Technician Alex performs Inspection 17 on Pump P-17.
 ex:Alex rdf:type https://www.commoncoreontologies.org/ont00001262 .
@@ -27,4 +27,4 @@ ex:ReportMeasurement https://www.commoncoreontologies.org/ont00001769 "0.0042"^^
 
 
 
-ex:PumpMaintenanceProcedure https://www.commoncoreontologies.org/ont00001942 
+ex:PumpMaintenanceProcedure https://www.commoncoreontologies.org/ont00001942 .
